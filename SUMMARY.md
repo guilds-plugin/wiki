@@ -6,4 +6,5 @@
 * [Plugin Configuration](plugin-configuration.md)
 * [Commands](commands.md)
 * [Placeholders](placeholders.md)
+* [Features](features.md)
 
