@@ -26,3 +26,7 @@ This feature was one that took a lot of time to create. Think of this like Playe
 
 You can think of buffs as Guild-wide potions. A member of a Guild can activate a buff for all guild members that are online and give them short-term perks such as a running speed boost, or health regeneration. You have full control over how the buffs work via the config. The entire GUI layout, the price, and the time, are all customizable. You can even make buffs execute commands! This feature is sure to be a great incentive for your players to strive to work as a team in order to be stronger!
 
+## Guild Chat
+
+Communication is important when it comes to teamwork. This is why the chat system was implemented. This allows players in a Guild to have a private chat with each other to talk about things such as what needs to be done, strategies to become the strongest guild, and so many other things!
+
