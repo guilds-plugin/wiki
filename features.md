@@ -18,5 +18,7 @@ Don't want to use our built-in claims? That's okay! The plugin is designed to be
 
 The banking system in Guilds is just like any other kind of bank you would think of. Each Guild has their own bank and they can all contribute to it along with take money out of it. Using the Guild Roles, you can specify which roles can deposit money and which roles can take money out! Money can be used on things such as leveling up the Guild's tier and buying buffs!
 
+## Guild Vaults
 
+This feature was one that took a lot of time to create. Think of this like PlayerVaults, but for Guilds. Each Guild has multiple vaults \(inventories\) that they can store items in. Utilizing Guild Roles, you can specify who can modify the vaults! One thing that's cool is that you don't just have one vault, you can have as many as you want! You can utilize the tier system to decide how many vaults each tier should have!
 
