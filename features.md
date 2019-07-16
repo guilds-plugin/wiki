@@ -14,7 +14,9 @@ The claiming system in Guilds utilizes WorldGuard. It's 100% optional. You can h
 
 Don't want to use our built-in claims? That's okay! The plugin is designed to be able to work with most popular claiming plugins that are out there.
 
+## Guild Banks
 
+The banking system in Guilds is just like any other kind of bank you would think of. Each Guild has their own bank and they can all contribute to it along with take money out of it. Using the Guild Roles, you can specify which roles can deposit money and which roles can take money out! Money can be used on things such as leveling up the Guild's tier and buying buffs!
 
 
 
