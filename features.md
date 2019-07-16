@@ -22,3 +22,7 @@ The banking system in Guilds is just like any other kind of bank you would think
 
 This feature was one that took a lot of time to create. Think of this like PlayerVaults, but for Guilds. Each Guild has multiple vaults \(inventories\) that they can store items in. Utilizing Guild Roles, you can specify who can modify the vaults! One thing that's cool is that you don't just have one vault, you can have as many as you want! You can utilize the tier system to decide how many vaults each tier should have!
 
+## Guild Buffs
+
+You can think of buffs as Guild-wide potions. A member of a Guild can activate a buff for all guild members that are online and give them short-term perks such as a running speed boost, or health regeneration. You have full control over how the buffs work via the config. The entire GUI layout, the price, and the time, are all customizable. You can even make buffs execute commands! This feature is sure to be a great incentive for your players to strive to work as a team in order to be stronger!
+
