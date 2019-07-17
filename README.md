@@ -16,7 +16,7 @@ Our core platforms that we support include the following:
 
 ## Getting Support
 
-There are mutliple ways to get support including help from me and others in the community Discord.
+There are multiple ways to get support including help from me and others in the community Discord.
 
 While I might have the answers to most questions, you should try a few steps before coming to me.
 
