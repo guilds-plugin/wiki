@@ -8,3 +8,7 @@
 * [Placeholders](placeholders.md)
 * [Features](features.md)
 
+## Major Updates
+
+* [The Arena System](major-updates/the-arena-system.md)
+
