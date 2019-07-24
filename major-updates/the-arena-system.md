@@ -24,5 +24,11 @@ In the following video, I will discuss the new config additions that will be com
 
 {% embed url="https://glaremasters.me/tutorials/config.mp4" %}
 
+## Other Changes / Bug Fixes
 
+* Removed a checksum verification for a certain library throwing errors from time to time
+* Fixed a long-term bug that was not handling the damage and mob XP from tiers properly
+* Fixed an issue that would occur when fighting mobs in certain instances
+* Fixed some language typos
+* Added in admin command to claim land for guilds.
 
