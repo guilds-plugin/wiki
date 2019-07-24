@@ -17,7 +17,9 @@
 %guilds\_code\_amount%  
 %guilds\_max\_members%  
 %guilds\_max\_balance%  
-%guilds\_formatted%
+%guilds\_formatted%  
+%guilds\_challenge\_wins%  
+%guilds\_challenge\_loses%
 
 ## [\#]() MVdWPlaceholderAPI <a id="mvdwplaceholderapi"></a>
 
@@ -39,6 +41,8 @@ To ensure that these stay updated with the regular PlaceholderAPI placeholders, 
 {placeholderapi\_guilds\_max\_members}  
 {placeholderapi\_guilds\_max\_balance}  
 {placeholderapi\_guilds\_formatted}  
+{placeholderapi\_guilds\_challenge\_wins}  
+{placeholderapi\_guilds\_challenge\_loses}  
 
 
 ## [\#]() EssentialsChat <a id="essentialschat"></a>
@@ -50,5 +54,9 @@ To ensure that these stay updated with the regular PlaceholderAPI placeholders, 
 {GUILD\_MEMBERS\_ONLINE}  
 {GUILD\_STATUS}  
 {GUILD\_ROLE}  
-{GUILD\_STATUS}
+{GUILD\_STATUS}  
+{GUILD\_CHALLENGE\_WINS}  
+{GUILD\_CHALLENGE\_LOSES}
+
+
 
