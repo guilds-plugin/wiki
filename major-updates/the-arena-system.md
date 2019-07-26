@@ -97,7 +97,7 @@ war:
 
 ## The Challenge
 
-Guild Masters \(and/or Officers\) can challenge other guilds to controlled combat in an arena. The challenge will go through several steps. A\) the challenge, B\) the accept, C\) joining the guild war, D\) gearing up, and E\) readying up.
+Guild Masters \(and/or Officers\) can challenge other guilds to controlled combat in an arena. The challenge will go through several steps. A\) the challenge, B\) the accept, C\) joining the guild war, and D\) gearing up.
 
 #### New Commands
 
