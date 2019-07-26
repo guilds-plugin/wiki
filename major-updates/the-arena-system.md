@@ -117,6 +117,7 @@ Members of each guild will fight until there is only one guild standing!
 * Plugin is now compiled under 1.14
 * You can now use materials from 1.13 and 1.14 in the plugin!
 * Implemented new placeholders for Guild Score!
+* Implemented new events for deposit and withdraw from bank
 * Added in a new Czech translation
 * German translation updated
 * Russian translation updated
