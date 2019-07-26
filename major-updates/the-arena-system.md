@@ -37,11 +37,40 @@ You have full control of what the arena is and where the team spawn.
 
 ## 
 
-New Config Additions
-
-
+## New Config Additions
 
 In the following video, I will discuss the new config additions that will be coming for the first update of the war arenas. These changes will allow be seen in your config once you launch the update! Keep in mind these are just a few of them and more are to come soon!
+
+#### Understanding
+
+The new updates to the config are fairly easy to understand.
+
+```yaml
+war:
+    # How often (in minutes) can a guild be the defender in a war?
+    # This is to help prevent abuse from guilds fighting each other to farm rewards.
+    # This is defaulted to 1 day.
+    defend-cooldown: 1440
+    # Would you like to block commands while a player is in the war?
+    disable-commands: false
+    # How long does a defending guild have to accept a war challenge? (In seconds)
+    accept-time: 120
+    # What is the min number of players needed on each side for a war to start?
+    min-players: 3
+    # What is the max number of players allowed on each side for a war?
+    max-players: 8
+    # How long do players of both sides have to join the war? (In seconds)
+    join-time: 60
+    # How long should we wait to teleport the players and start the war after everyone joined?
+    ready-time: 60
+    rewards:
+        # Would you like to give rewards to the winning guild?
+        enabled: false
+        # What rewards (commands) would you like to run for the winning Guild?
+        # Current supports {player}.
+        rewards: 
+        - ''
+```
 
 {% embed url="https://glaremasters.me/tutorials/config.mp4" %}
 
