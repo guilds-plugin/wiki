@@ -35,8 +35,6 @@ You have full control of what the arena is and where the team spawn.
 
 {% embed url="https://glaremasters.me/tutorials/arenas.mp4" %}
 
-## 
-
 ## New Config Additions
 
 In the following video, I will discuss the new config additions that will be coming for the first update of the war arenas. These changes will allow be seen in your config once you launch the update! Keep in mind these are just a few of them and more are to come soon!
@@ -73,6 +71,22 @@ war:
 ```
 
 {% embed url="https://glaremasters.me/tutorials/config.mp4" %}
+
+## The Challenge
+
+Guild Masters \(and/or Officers\) can challenge other guilds to controlled combat in an arena. The challenge will go through several steps. A\) the challenge, B\) the accept, C\) joining the guild war, D\) gearing up, and E\) readying up.
+
+There will be three checks before the challenge is created:
+
+1. If the guild has already accepted a defense in the last 24h.
+2. If there is an open arena.
+3. If there are any members of the defending guild online to accept the challenge.
+
+When a challenge is accepted, an ActionBar will show up to all players in the guild telling them to join the war.
+
+ If there are an uneven number of players _Example: 5 v 3, last two members to have joined on the larger team get kicked from the guild war in order for the team to be 3 v 3_
+
+After the countdown players have another countdown \(_defaulted to one minute_\) in order to equip themselves.
 
 ## The War
 
