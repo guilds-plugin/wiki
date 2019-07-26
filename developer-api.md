@@ -8,3 +8,50 @@ Obtaining the instance of the API is pretty simple by using the singleton that p
 GuildsAPI api = Guilds.getApi();
 ```
 
+## Using the API
+
+The API can be used for obtaining a bunch of information from the plugin. You can browse over the following section to see what all is provided.
+
+### Getting a Guild object
+
+We provide a few ways to obtain a Guild object, so feel free to use what is easiest for you.
+
+#### Using OfflinePlayer
+
+```java
+    /**
+     * Get the guild of a player
+     * @param player the players you're getting the guild of
+     * @return the guild that the player is in
+     */
+    public Guild getGuild(@NotNull OfflinePlayer player) {
+        return guildHandler.getGuild(player);
+    }
+```
+
+**Using Guild UUID**
+
+```java
+    /**
+     * Get a guild by it's uuid
+     * @param uuid uuid of the player
+     * @return the guild they are in
+     */
+    public Guild getGuild(@NotNull UUID uuid) {
+        return guildHandler.getGuild(uuid);
+    }
+```
+
+**Using Player name**
+
+```java
+    /**
+     * Get the guild of a player by their name
+     * @param name the name of the player
+     * @return the guild they are in
+     */
+    public Guild getGuild(@NotNull String name) {
+        return guildHandler.getGuild(name);
+    }
+```
+
