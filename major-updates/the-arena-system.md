@@ -122,6 +122,7 @@ Members of each guild will fight until there is only one guild standing!
 * Implemented GuildRenameEvent
 * Implemented GuildBankWithdrawEvent
 * Implemented GuildBankDepositEvent
+* GuildLeaveEvent now has causes for the reason it happened
 * Added in a new Czech translation
 * German translation updated
 * Russian translation updated
