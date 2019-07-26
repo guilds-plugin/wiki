@@ -96,3 +96,149 @@ The GuildHandler will give you access to anything you might need in the plugin. 
     }
 ```
 
+## Custom Events
+
+In the plugin we offer a bunch of custom events that you can listen to and modify as you see fit.
+
+### Base GuildEvent
+
+```java
+    /**
+     * Base guild event
+     * @param player player in event
+     * @param guild guild in the event
+     */
+    public GuildEvent(Player player, Guild guild) {
+        super(player);
+        this.guild = guild;
+    }
+```
+
+### GuildAddAllyEvent
+
+```java
+    /**
+     * This event takes place when two guilds ally each other
+     * @param player player who accepted
+     * @param guild guild one
+     * @param ally guild two
+     */
+    public GuildAddAllyEvent(Player player, Guild guild, Guild ally) {
+        super(player, guild);
+        this.ally = ally;
+    }
+```
+
+### GuildCreateEvent
+
+```java
+    /**
+     * Called when people create a guild
+     * @param player player creating the guild
+     * @param guild the guild being created
+     */
+    public GuildCreateEvent(Player player, Guild guild) {
+        super(player, guild);
+    }
+```
+
+### GuildDepositMoneyEvent
+
+```java
+    /**
+     * Base guild event
+     *  @param player player in event
+     * @param guild  guild in the event
+     * @param amount the amount to deposit
+     */
+    public GuildDepositMoneyEvent(Player player, Guild guild, double amount) {
+        super(player, guild);
+        this.amount = amount;
+    }
+```
+
+### GuildInviteEvent
+
+```java
+    /**
+     * Called when a player gets invited to a guild
+     * @param player the player inviting other to guild
+     * @param guild the guild player will be joining
+     * @param invitedPlayer the player being invited
+     */
+    public GuildInviteEvent(Player player, Guild guild, Player invitedPlayer) {
+        super(player, guild);
+        this.invitedPlayer = invitedPlayer;
+    }
+```
+
+### GuildJoinEvent
+
+```java
+    /**
+     * Called when a player joins a guild
+     * @param player the player joining a guild
+     * @param guild the guild the player will be joining
+     */
+    public GuildJoinEvent(Player player, Guild guild) {
+        super(player, guild);
+    }
+```
+
+### GuildLeaveEvent
+
+```java
+    /**
+     * Called a when a player leaves the guild
+     * @param player the player leaving the guild
+     * @param guild the guild the player was leaving
+     * @param cause the reason the event was called
+     */
+    public GuildLeaveEvent(Player player, Guild guild, Cause cause) {
+        super(player, guild);
+        this.cause = cause;
+    }
+
+    public enum Cause {
+        PLAYER_LEFT,
+        PLAYER_KICKED,
+        ADMIN_REMOVED
+    }
+```
+
+### GuildRemoveAllyEvent
+
+```java
+    /**
+     * Called when a guild removes an ally
+     * @param player the player calling the removal
+     * @param guild the guild calling the removal
+     * @param ally the guild being removed
+     */
+    public GuildRemoveAllyEvent(Player player, Guild guild, Guild ally) {
+        super(player, guild);
+        this.ally = ally;
+    }
+```
+
+### GuildRemoveEvent
+
+```java
+    /**
+     * Called when a guild is removed
+     * @param player the player removing the guild
+     * @param guild the guild getting removed
+     * @param cause the reason for the guild being removed
+     */
+    public GuildRemoveEvent(Player player, Guild guild, Cause cause) {
+        super(player, guild);
+        this.cause = cause;
+    }
+
+    public enum Cause {
+        MASTER_LEFT,
+        PLAYER_DELETED,
+        ADMIN_DELETED
+    }
+```
+
