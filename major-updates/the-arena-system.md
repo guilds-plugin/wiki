@@ -111,6 +111,7 @@ Members of each guild will fight until there is only one guild standing!
 
 * Removed a checksum verification for a certain library throwing errors from time to time
 * Fixed a long-term bug that was not handling the damage and mob XP from tiers properly
+* Fixed not being able to get the Guild from custom events
 * Implemented Lazy Loading for the plugin so future guilds won't take up as much disk space
 * Fixed an issue that would occur when fighting mobs in certain instances
 * Fixed some language typos
