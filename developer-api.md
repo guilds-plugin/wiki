@@ -242,3 +242,29 @@ In the plugin we offer a bunch of custom events that you can listen to and modif
     }
 ```
 
+### GuildRenameEvent
+
+```java
+    /**
+     * @param player player in event
+     * @param guild  guild in the event
+     */
+    public GuildRenameEvent(Player player, Guild guild) {
+        super(player, guild);
+    }
+```
+
+### GuildWithdrawMoneyEvent
+
+```java
+    /**
+     * @param player player in event
+     * @param guild  guild in the event
+     * @param amount the amount to withdraw
+     */
+    public GuildWithdrawMoneyEvent(Player player, Guild guild, double amount) {
+        super(player, guild);
+        this.amount = amount;
+    }
+```
+
