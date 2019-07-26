@@ -54,4 +54,5 @@ In the following video, I will discuss the new config additions that will be com
 * Added in admin command to claim land for guilds.
 * Plugin is now compiled under 1.14
 * You can now use materials from 1.13 and 1.14 in the plugin!
+* Implemented new placeholders for Guild Score!
 
