@@ -76,6 +76,15 @@ war:
 
 Guild Masters \(and/or Officers\) can challenge other guilds to controlled combat in an arena. The challenge will go through several steps. A\) the challenge, B\) the accept, C\) joining the guild war, D\) gearing up, and E\) readying up.
 
+#### New Commands
+
+* /guild war accept
+* /guild war challenge &lt;guild&gt;
+* /guild war deny
+* /guild war join
+
+#### Understanding
+
 There will be three checks before the challenge is created:
 
 1. If the guild has already accepted a defense in the last 24h.
