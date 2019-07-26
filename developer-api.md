@@ -34,8 +34,8 @@ We provide a few ways to obtain a Guild object, so feel free to use what is easi
 ```java
     /**
      * Get a guild by it's uuid
-     * @param uuid uuid of the player
-     * @return the guild they are in
+     * @param uuid uuid of the guild
+     * @return the guild the uuid belong to
      */
     public Guild getGuild(@NotNull UUID uuid) {
         return guildHandler.getGuild(uuid);
@@ -46,9 +46,9 @@ We provide a few ways to obtain a Guild object, so feel free to use what is easi
 
 ```java
     /**
-     * Get the guild of a player by their name
-     * @param name the name of the player
-     * @return the guild they are in
+     * Get a guild by it's name
+     * @param name the name of the guild
+     * @return the guild object
      */
     public Guild getGuild(@NotNull String name) {
         return guildHandler.getGuild(name);
