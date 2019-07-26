@@ -6,6 +6,7 @@
 * [Plugin Configuration](plugin-configuration.md)
 * [Commands](commands.md)
 * [Placeholders](placeholders.md)
+* [Developer API](developer-api.md)
 * [Features](features.md)
 
 ## Major Updates
