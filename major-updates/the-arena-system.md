@@ -74,6 +74,16 @@ war:
 
 {% embed url="https://glaremasters.me/tutorials/config.mp4" %}
 
+## The War
+
+Members of each guild will fight until there is only one guild standing! 
+
+* Each guild will be warped to their respective warps \(challenger for the challengers, and defender for the defenders\) and then the fight will begin.
+* Each guild fights to kill members of the other guild to win.
+* Each time a guild member is killed they will be warped back to where they originally were.
+* Once all the members of one guild are defeated, the opposite guild is declared the winner.
+* Rewards will be executed for all players on the winning team if enabled.
+
 ## Other Changes / Bug Fixes
 
 * Removed a checksum verification for a certain library throwing errors from time to time
