@@ -14,6 +14,29 @@ Before I get into that, you might also notice we use a new software for the wiki
 
 Now, let's get into the fun stuff of this update.
 
+## New Materials
+
+As of this update, Guilds is now compiled under `1.14.4` in order to allow support for `1.13` and `1.14` materials. When you run the updated jar, there will be a link at the top of the GUI part of the config that shares a link that you can go to in order to see all the materials your can use.
+
+The plugin is designed the have these work on all versions, but if they don't exist, for example, using a `1.14` item on `1.8`, it will just not show up.
+
+**Note:** Most likely there will be a few default items that you will need to update. If you get any console errors saying something like `enum value MATERIAL.BED` doesn't exist, just follow the link in the config to see what material to use instead.
+
+## Language Updates
+
+* Added in a new Czech translation
+* German translation updated
+* Russian translation updated
+
+## **API Changes**
+
+* Fixed not being able to get the Guild from custom events
+* Updated some clarification on some methods
+* Implemented GuildRenameEvent
+* Implemented GuildBankWithdrawEvent
+* Implemented GuildBankDepositEvent
+* GuildLeaveEvent now has causes for the reason it happened
+
 ## **Arenas**
 
 The arenas by themselves are a massive implementation into the plugin. As a server owner, you will be able to create your own arenas, along with setting the spawn points for each team! Watch the video below to get a better idea of how to manage your arenas.
@@ -111,19 +134,9 @@ Members of each guild will fight until there is only one guild standing!
 
 * Removed a checksum verification for a certain library throwing errors from time to time
 * Fixed a long-term bug that was not handling the damage and mob XP from tiers properly
-* Fixed not being able to get the Guild from custom events
 * Implemented Lazy Loading for the plugin so future guilds won't take up as much disk space
 * Fixed an issue that would occur when fighting mobs in certain instances
 * Fixed some language typos
 * Added in admin command to claim land for guilds.
-* Plugin is now compiled under 1.14
-* You can now use materials from 1.13 and 1.14 in the plugin!
 * Implemented new placeholders for Guild Score!
-* Implemented GuildRenameEvent
-* Implemented GuildBankWithdrawEvent
-* Implemented GuildBankDepositEvent
-* GuildLeaveEvent now has causes for the reason it happened
-* Added in a new Czech translation
-* German translation updated
-* Russian translation updated
 
