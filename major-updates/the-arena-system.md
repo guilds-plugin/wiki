@@ -60,7 +60,9 @@ You have full control of what the arena is and where the team spawn.
 
 **Note:** When I say you have full control, I mean **FULL**, as in, you need to implement your own protection on the arena itself such as a WorldGuard region and allowing PVP, etc.
 
-{% embed url="https://glaremasters.me/tutorials/arenas.mp4" %}
+{% embed url="https://youtu.be/9B6xtL6YelY" %}
+
+
 
 ## New Config Additions
 
@@ -97,7 +99,9 @@ war:
         - ''
 ```
 
-{% embed url="https://glaremasters.me/tutorials/config.mp4" %}
+{% embed url="https://youtu.be/TTKTAezurK0" %}
+
+
 
 ## The Challenge
 
