@@ -8,6 +8,8 @@ This update is **SO MASSIVE** that I've decided to put the update logs in a sing
 
 In order to help you guys learn about what all has changed, each new major part of the update will have a video and a text-version to tell you about everything!
 
+**Note:** It is super **important** that you read through all these changes so you understand what is changing. There are deep logistical changes happening throughout various parts of the plugin, especially with the GUIs, so you need to read through everything so your GUIs don't break.
+
 ## New Wiki
 
 Before I get into that, you might also notice we use a new software for the wiki! Thank you so much GitBook for assisting me in moving over from my old software and graciously providing this for us to use.
