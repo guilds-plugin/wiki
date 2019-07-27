@@ -56,6 +56,8 @@ The new arena system is fairly easy to understand. As an admin of the server, yo
 
 You have full control of what the arena is and where the team spawn.
 
+**Note:** When I say you have full control, I mean **FULL**, as in, you need to implement your own protection on the arena itself such as a WorldGuard region and allowing PVP, etc.
+
 {% embed url="https://glaremasters.me/tutorials/arenas.mp4" %}
 
 ## New Config Additions
