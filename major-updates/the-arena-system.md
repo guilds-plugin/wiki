@@ -128,6 +128,8 @@ After the countdown players have another countdown \(_defaulted to one minute_\)
 
 **Note**: Some of the default messages have been updated in order to make it easier to see important details.
 
+{% embed url="https://glaremasters.me/tutorials/challenge.mp4" %}
+
 ## The War
 
 Members of each guild will fight until there is only one guild standing! 
