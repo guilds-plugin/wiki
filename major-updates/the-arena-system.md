@@ -10,6 +10,8 @@ In order to help you guys learn about what all has changed, each new major part 
 
 **Note:** It is super **important** that you read through all these changes so you understand what is changing. There are deep logistical changes happening throughout various parts of the plugin, especially with the GUIs, so you need to read through everything so your GUIs don't break.
 
+Side-Note: A good way to determine who is on each team in the arena would be a plugin such as NameTagEdit.
+
 ## New Wiki
 
 Before I get into that, you might also notice we use a new software for the wiki! Thank you so much GitBook for assisting me in moving over from my old software and graciously providing this for us to use.
@@ -60,9 +62,7 @@ You have full control of what the arena is and where the team spawn.
 
 **Note:** When I say you have full control, I mean **FULL**, as in, you need to implement your own protection on the arena itself such as a WorldGuard region and allowing PVP, etc.
 
-{% embed url="https://youtu.be/9B6xtL6YelY" %}
-
-
+{% embed url="https://glaremasters.me/tutorials/arenas.mp4" %}
 
 ## New Config Additions
 
@@ -99,9 +99,7 @@ war:
         - ''
 ```
 
-{% embed url="https://youtu.be/TTKTAezurK0" %}
-
-
+{% embed url="https://glaremasters.me/tutorials/config.mp4" %}
 
 ## The Challenge
 
