@@ -140,6 +140,8 @@ Members of each guild will fight until there is only one guild standing!
 * Once all the members of one guild are defeated, the opposite guild is declared the winner.
 * Rewards will be executed for all players on the winning team if enabled.
 
+{% embed url="https://glaremasters.me/tutorials/war.mp4" %}
+
 ## Other Changes / Bug Fixes
 
 * Removed a checksum verification for a certain library throwing errors from time to time
