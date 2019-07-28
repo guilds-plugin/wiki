@@ -126,6 +126,8 @@ When a challenge is accepted, an ActionBar will show up to all players in the gu
 
 After the countdown players have another countdown \(_defaulted to one minute_\) in order to equip themselves.
 
+**Note**: Some of the default messages have been updated in order to make it easier to see important details.
+
 ## The War
 
 Members of each guild will fight until there is only one guild standing! 
