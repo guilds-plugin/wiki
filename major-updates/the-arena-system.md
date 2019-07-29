@@ -31,6 +31,8 @@ The plugin is designed the have these work on all versions, but if they don't ex
 * Added in a new Czech translation
 * German translation updated
 * Russian translation updated
+* Italian translation updated
+* Brazilian translation updated
 
 ## **API Changes**
 
@@ -151,4 +153,5 @@ Members of each guild will fight until there is only one guild standing!
 * Fixed some language typos
 * Added in admin command to claim land for guilds.
 * Implemented new placeholders for Guild Score!
+* Removed tablist from config \(was removed from the actual plugin a few updates back\)
 
