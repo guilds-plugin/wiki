@@ -54,6 +54,7 @@ To ensure that these stay updated with the regular PlaceholderAPI placeholders, 
 {GUILD\_MEMBERS\_ONLINE}  
 {GUILD\_STATUS}  
 {GUILD\_ROLE}  
+{GUILD\_FORMATTED}  
 {GUILD\_STATUS}  
 {GUILD\_CHALLENGE\_WINS}  
 {GUILD\_CHALLENGE\_LOSES}
