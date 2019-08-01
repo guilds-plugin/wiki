@@ -47,7 +47,7 @@ The plugin is designed the have these work on all versions, but if they don't ex
 
 The arenas by themselves are a massive implementation into the plugin. As a server owner, you will be able to create your own arenas, along with setting the spawn points for each team! Watch the video below to get a better idea of how to manage your arenas.
 
-#### New Commands
+### New Commands
 
 * /guild arena set challenger &lt;arena&gt;
 * /guild arena create &lt;name&gt;
@@ -56,7 +56,7 @@ The arenas by themselves are a massive implementation into the plugin. As a serv
 * /guild arena list
 * /guild arena tp &lt;arena&gt; &lt;challenger/defender&gt;
 
-#### Understanding
+### Understanding
 
 The new arena system is fairly easy to understand. As an admin of the server, you can create new arenas, set the spawn points for them, teleport to them, list the arenas, and delete the arenas as you see fit.
 
@@ -64,13 +64,13 @@ You have full control of what the arena is and where the team spawn.
 
 **Note:** When I say you have full control, I mean **FULL**, as in, you need to implement your own protection on the arena itself such as a WorldGuard region and allowing PVP, etc.
 
-{% embed url="https://glaremasters.me/static/tutorials/arenas.mp4" %}
+{% embed url="https://player.vimeo.com/video/351329824" %}
 
 ## New Config Additions
 
 In the following video, I will discuss the new config additions that will be coming for the first update of the war arenas. These changes will allow be seen in your config once you launch the update! Keep in mind these are just a few of them and more are to come soon!
 
-#### Understanding
+### Understanding
 
 The new updates to the config are fairly easy to understand.
 
@@ -101,20 +101,20 @@ war:
         - ''
 ```
 
-{% embed url="https://glaremasters.me/static/tutorials/config.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/config.mp4" caption="" %}
 
 ## The Challenge
 
 Guild Masters \(and/or Officers\) can challenge other guilds to controlled combat in an arena. The challenge will go through several steps. A\) the challenge, B\) the accept, C\) joining the guild war, and D\) gearing up.
 
-#### New Commands
+### New Commands
 
 * /guild war accept
 * /guild war challenge &lt;guild&gt;
 * /guild war deny
 * /guild war join
 
-#### Understanding
+### Understanding
 
 There will be three checks before the challenge is created:
 
@@ -124,17 +124,17 @@ There will be three checks before the challenge is created:
 
 When a challenge is accepted, an ActionBar will show up to all players in the guild telling them to join the war.
 
- If there are an uneven number of players _Example: 5 v 3, last two members to have joined on the larger team get kicked from the guild war in order for the team to be 3 v 3_
+If there are an uneven number of players _Example: 5 v 3, last two members to have joined on the larger team get kicked from the guild war in order for the team to be 3 v 3_
 
 After the countdown players have another countdown \(_defaulted to one minute_\) in order to equip themselves.
 
 **Note**: Some of the default messages have been updated in order to make it easier to see important details.
 
-{% embed url="https://glaremasters.me/static/tutorials/challenge.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/challenge.mp4" caption="" %}
 
 ## The War
 
-Members of each guild will fight until there is only one guild standing! 
+Members of each guild will fight until there is only one guild standing!
 
 * Each guild will be warped to their respective warps \(challenger for the challengers, and defender for the defenders\) and then the fight will begin.
 * Each guild fights to kill members of the other guild to win.
@@ -142,7 +142,7 @@ Members of each guild will fight until there is only one guild standing!
 * Once all the members of one guild are defeated, the opposite guild is declared the winner.
 * Rewards will be executed for all players on the winning team if enabled.
 
-{% embed url="https://glaremasters.me/static/tutorials/war.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/war.mp4" caption="" %}
 
 ## Other Changes / Bug Fixes
 
