@@ -64,7 +64,7 @@ You have full control of what the arena is and where the team spawn.
 
 **Note:** When I say you have full control, I mean **FULL**, as in, you need to implement your own protection on the arena itself such as a WorldGuard region and allowing PVP, etc.
 
-{% embed url="https://glaremasters.me/tutorials/arenas.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/arenas.mp4" %}
 
 ## New Config Additions
 
@@ -101,7 +101,7 @@ war:
         - ''
 ```
 
-{% embed url="https://glaremasters.me/tutorials/config.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/config.mp4" %}
 
 ## The Challenge
 
@@ -130,7 +130,7 @@ After the countdown players have another countdown \(_defaulted to one minute_\)
 
 **Note**: Some of the default messages have been updated in order to make it easier to see important details.
 
-{% embed url="https://glaremasters.me/tutorials/challenge.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/challenge.mp4" %}
 
 ## The War
 
@@ -142,7 +142,7 @@ Members of each guild will fight until there is only one guild standing!
 * Once all the members of one guild are defeated, the opposite guild is declared the winner.
 * Rewards will be executed for all players on the winning team if enabled.
 
-{% embed url="https://glaremasters.me/tutorials/war.mp4" %}
+{% embed url="https://glaremasters.me/static/tutorials/war.mp4" %}
 
 ## Other Changes / Bug Fixes
 
