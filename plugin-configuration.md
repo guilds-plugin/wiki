@@ -35,11 +35,21 @@ settings:
     save-interval: 1
     # Would you like to check for plugin updates on startup? It's highly suggested you keep this enabled!
     update-check: true
+    # What would you like the command aliases for the plugin to be?
+    # You can have as many as your want, just separate each with | and NO SPACES.
+    plugin-aliases: guild|guilds|g
+    # Would you like to run vault permission changes async? (Will be less stress on the main thread and prevent lag)
+    # Async is used by LuckPerms.
+    # Set this to false if you are using PEx.
+    # I do suggest you switch to LuckPerms so that you can keep it async, but ultimately the choice is yours.
+    run-vault-async: true
 hooks:
     # Do we want to hook into Essentials-Chat format to handle guild placeholders?
     essentials-chat: false
     # Do we want to hook into WorldGuard to allow claiming land?
     worldguard-claims: false
+# Use the following website to get available materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# This can work across all MC versions and will attempt to use the proper material based on what version of MC you are using.
 guis:
     guild-list:
         # What should the name of the inventory be?
@@ -51,6 +61,7 @@ guis:
         # LOADED: In the order that the Guilds were loaded on startup
         # TIER: In order from highest tier to lowest tier
         # MEMBERS: In order from most members to least members
+        # BALANCE: In order from most in bank to least
         sort: LOADED
         # What should be the default texture url for textures that fail to load in? Refer to the Guild Manage settings to see how to change the texture!
         head-default-url: 7a2df315b43583b1896231b77bae1a507dbd7e43ad86c1cfbe3b2b8ef3430e9e
@@ -58,6 +69,7 @@ guis:
         # This is just an example of all the available placeholders that you can use for the lore!
         # Note: With v3.6.7 and on, you can now use {guild-tier-name} for the name of the tier.
         # Also, from v3.6.7 and on, {guild-status} will now apply from what you set for the guild-info GUI for the status being public or private.
+        # In version 3.5.2.2, {guild-challenge-wins} and {guild-challenge-loses} have been added.
         head-lore: 
         - '&cName&8: &a{guild-name}'
         - '&cPrefix&8: &a{guild-prefix}'
@@ -557,6 +569,8 @@ guild:
         chat: '&7&l[Guild Chat]&r &b[{role}&b]&r &b {player}: {message}'
         # Similar to the one above, just for the admins spying.
         spy: '&7&l[Guild Spy]&r &b[{guild}&b]&r &b[{role}&b]&r &b {player}: {message}'
+        # Would you like to log the guild chat to console?
+        log-guild-chat: false
         # Used for {GUILD_FORMATTED} and %guilds_formatted%
         placeholder-design:
             # The left bracket in the placeholder
@@ -580,16 +594,39 @@ guild:
     # Would you like to send players their guild's motd on login?
     motd-on-login: true
 war:
+    # How often (in minutes) can a guild be the defender in a war?
+    # This is to help prevent abuse from guilds fighting each other to farm rewards.
+    # This is defaulted to 1 day.
+    defend-cooldown: 1440
+    # Would you like to block commands while a player is in the war?
+    disable-commands: false
     # How long does a defending guild have to accept a war challenge? (In seconds)
     accept-time: 120
     # What is the min number of players needed on each side for a war to start?
-    min-players: 1
+    min-players: 3
     # What is the max number of players allowed on each side for a war?
     max-players: 8
     # How long do players of both sides have to join the war? (In seconds)
-    join-time: 20
+    join-time: 60
     # How long should we wait to teleport the players and start the war after everyone joined?
-    ready-time: 20
+    ready-time: 60
+    post-challenge-commands:
+        # Would you like to enable running commands after a challenge ends? (such as broadcasting)
+        enabled: false
+        # What commands would you like to run after a challenge ends??
+        # Supports the following placeholder:
+        # {challenger} - The name of the challenging Guild
+        # {defender} - The name of the defending Guild
+        # {winner} - The winner of the challenge
+        commands: 
+        - ''
+    rewards:
+        # Would you like to give rewards to the winning guild?
+        enabled: false
+        # What rewards (commands) would you like to run for the winning Guild?
+        # Current supports {player}.
+        rewards: 
+        - ''
 timers:
     cooldowns:
         # How often (in seconds) can a player set their guild home?
@@ -639,15 +676,6 @@ claims:
     # Would you like to make it so that claims can only be aquired through the purchasing with signs?
     # This will disable the regular claim commands.
     force-claim-signs: false
-tablist:
-    # Should the plugin use the built-in tablist?
-    enabled: false
-    # Would you like to display a user's display name instead of their MC username?
-    display-name: false
-    # Change how the Prefixes in the TabList show!
-    # Note: DO NOT REMOVE THE {guild}
-    # You can use {prefix} to show the Guild Prefix instead if you would like.
-    format: '&7[&b{guild}&7]&r'
 tickets:
     # What do you want the name of the upgrade ticket to be?
     name: '&bGuild Upgrade Ticket'
@@ -876,6 +904,5 @@ roles:
             see-code-redeemers: false
             modify-motd: false
             initiate-war: false
-
 ```
 
