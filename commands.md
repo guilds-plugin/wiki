@@ -135,6 +135,32 @@ The ally commands are a set of commands that let guild members control different
  **Permission**: guilds.command.ally.remove  
  This command allows you to remove any of your current allies!
 
+## \# Arena Commands
+
+`/guild arena set challenger <arena>`  
+**Permission**: guilds.command.admin  
+Sets challenger side for an arena
+
+`/guild arena create <name>`  
+**Permission**: guilds.command.admin  
+Create an arena
+
+`/guild arena set defender <arena>`  
+**Permission**: guilds.command.admin  
+Sets defender side for an arena
+
+`/guild arena delete <arena>`  
+**Permission**: guilds.command.admin  
+Delete an arena
+
+`/guild arena list`  
+**Permission**: guilds.command.admin  
+Lists all arenas on the server
+
+`/guild arena tp <arena> <side>`  
+**Permission**: guilds.command.admin  
+Teleport to specific side of an arena
+
 ## [\#]() Bank Commands <a id="bank-commands"></a>
 
 One of the cool features about this plugin is that it allows each guild to have a centralized bank that all players in a guild can work together to grow!
