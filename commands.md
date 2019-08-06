@@ -343,3 +343,21 @@ Random commands that haven't been categorized yet.
  **Permission**: guilds.command.request  
  Send a request to join a guild.
 
+## \# War Commands
+
+`/guild war accept`  
+**Permission**: guilds.command.war.accept  
+Accept a war request
+
+`/guild war challenge <guild>`  
+**Permission**: guilds.command.war.challenge  
+Challenge another guild to a war
+
+`/guild war deny`  
+**Permission**: guilds.command.war.deny  
+Deny a war request
+
+`/guild war join`  
+**Permission**: guilds.command.war.join  
+Join a guild war
+
