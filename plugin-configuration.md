@@ -11,7 +11,7 @@ The config file _should_ automatically update with the new additions added in an
 # Creator: Glare
 # Contributors: https://github.com/guilds-plugin/Guilds/graphs/contributors
 # Issues: https://github.com/guilds-plugin/Guilds/issues
-# Spigot: https://www.spigotmc.org/resources/guilds.48920/
+# Spigot: https://www.spigotmc.org/resources/66176/
 # Wiki: https://wiki.glaremasters.me/
 # Discord: https://glaremasters.me/discord
 settings:
@@ -27,10 +27,6 @@ settings:
     # As you can see this is currently en-US, and there is a en-US.yml file in the language folder.
     # If I wanted to switch to french, I would use fr-FR as the language instead.
     messagesLanguage: en-US
-    # Would you like to allow admin players to update the languages via command?
-    # If yes, set to true, and they will be able to run /guild admin update-languages
-    # If no, set to false, and the command will only run via console.
-    player-update-languages: false
     # How often (in minutes) do you want all Guild Data to save?
     save-interval: 1
     # Would you like to check for plugin updates on startup? It's highly suggested you keep this enabled!
@@ -62,7 +58,16 @@ guis:
         # TIER: In order from highest tier to lowest tier
         # MEMBERS: In order from most members to least members
         # BALANCE: In order from most in bank to least
+        # WINS: In order from most arena wins to least
         sort: LOADED
+        # What item should players click to go to the next page?
+        next-page-item: EMPTY_MAP
+        # What should the name of this item be?
+        next-page-item-name: '&fNext Page'
+        # What item should players click to go to the previous page?
+        previous-page-item: EMPTY_MAP
+        # What should the name of this item be?
+        previous-page-item-name: '&fPrevious Page'
         # What should be the default texture url for textures that fail to load in? Refer to the Guild Manage settings to see how to change the texture!
         head-default-url: 7a2df315b43583b1896231b77bae1a507dbd7e43ad86c1cfbe3b2b8ef3430e9e
         # You are free to design this to your liking
@@ -83,6 +88,10 @@ guis:
         gui-name: Guild Buffs
         # Do we want to allow users to have more than one buff at a time?
         buff-stacking: false
+        # Do you want to enable requiring per-buff permissions?
+        # For example, if I wanted to buy the haste buff,
+        # I would need the permission guilds.buff.haste
+        per-buff-permissions: false
         buffs:
             haste:
                 # What do you want to name the buff?
@@ -553,6 +562,8 @@ guild:
         name: '[a-zA-Z0-9&]{1,64}'
         # Similar to the name, just refer above.
         prefix: '[a-zA-Z0-9&]{1,20}'
+        # Would you like to include color codes signs (&b &l, etc) in the length check?
+        include-color-codes: true
     # Would you like to allow players to make a guild without a prefix?
     disable-prefix: false
     blacklist:
@@ -904,5 +915,6 @@ roles:
             see-code-redeemers: false
             modify-motd: false
             initiate-war: false
+
 ```
 
