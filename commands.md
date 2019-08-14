@@ -96,10 +96,6 @@ Admin commands are basically self-understandable. They give you the power over h
  **Permission**: guilds.command.admin  
  Toggle the status of a guild by force.
 
-`/guild admin update-language`  
- **Permission**: guilds.command.admin  
- Re-download the language files for the plugin
-
 `/guild admin upgrade <guild>`  
  **Permission**: guilds.command.admin  
  Force upgrade a guild's tier.
@@ -212,6 +208,18 @@ This feature is actually a new one at the time of writing this wiki. The idea ca
 `/guild code redeem <code>`  
  **Permission**: guilds.command.code.redeem  
  Allows you to redeem an invite code!
+
+## \# Console Commands
+
+These are commands that are only to be ran from console because they do important operations that typical players shouldn't be doing.
+
+`/guild console update-languages`  
+**Permission**: guilds.command.admin  
+Update language files for the plugin
+
+`/guild console backup`  
+**Permission**: guilds.command.admin  
+Create a backup of all plugin data
 
 ## [\#]() GUI Commands <a id="gui-commands"></a>
 
