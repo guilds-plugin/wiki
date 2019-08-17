@@ -14,7 +14,7 @@
 
 **Vault** [Vault](https://www.spigotmc.org/resources/34315/) is a requirement for the plugin to run. It helps handling economy and permissions. Please make sure this plugin is on your server before you try and start Guilds, or it will NOT start!
 
-**Economy Plugin** An economy plugin is required to make the plugin work properly. Some popular ones are [EssentialsX](https://www.spigotmc.org/resources/9089/), iConomy, PlayerPoints, TheNewEconomy, etc.
+**Economy Plugin** An economy plugin is required to make the plugin work properly. Some popular ones are [EssentialsX](https://www.spigotmc.org/resources/9089/), [TheNewEconomy](https://www.spigotmc.org/resources/7805/), etc.
 
 **Permission Plugin** A permission plugin is required on for this plugin to work properly. The commands and other features all use permission nodes to properly work. A popular one is [LuckPerms](https://www.spigotmc.org/resources/28140/)!
 
