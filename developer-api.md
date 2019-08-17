@@ -206,6 +206,27 @@ In the plugin we offer a bunch of custom events that you can listen to and modif
     }
 ```
 
+### GuildPrefixEvent
+
+```java
+    private String prefix;
+
+    /**
+     * Base guild event
+     *  @param player player in event
+     * @param guild  guild in the event
+     * @param prefix
+     */
+    public GuildPrefixEvent(Player player, Guild guild, String prefix) {
+        super(player, guild);
+        this.prefix = prefix;
+    }
+
+    public String getPrefix() {
+        return prefix;
+    }
+```
+
 ### GuildRemoveAllyEvent
 
 ```java
@@ -224,6 +245,8 @@ In the plugin we offer a bunch of custom events that you can listen to and modif
 ### GuildRemoveEvent
 
 ```java
+    private String name;
+    
     /**
      * Called when a guild is removed
      * @param player the player removing the guild
@@ -249,8 +272,34 @@ In the plugin we offer a bunch of custom events that you can listen to and modif
      * @param player player in event
      * @param guild  guild in the event
      */
-    public GuildRenameEvent(Player player, Guild guild) {
+     public GuildRenameEvent(Player player, Guild guild, String newName) {
         super(player, guild);
+        this.name = newName;
+    }
+
+    public String getName() {
+        return name;
+    }
+```
+
+### GuildTransferEvent
+
+```java
+private Player newMaster;
+
+    /**
+     * Base guild event
+     *  @param player player in event
+     * @param guild  guild in the event
+     * @param newMaster
+     */
+    public GuildTransferEvent(Player player, Guild guild, Player newMaster) {
+        super(player, guild);
+        this.newMaster = newMaster;
+    }
+
+    public Player getNewMaster() {
+        return newMaster;
     }
 ```
 
