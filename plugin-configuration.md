@@ -27,8 +27,6 @@ settings:
     # As you can see this is currently en-US, and there is a en-US.yml file in the language folder.
     # If I wanted to switch to french, I would use fr-FR as the language instead.
     messagesLanguage: en-US
-    # How often (in minutes) do you want all Guild Data to save?
-    save-interval: 1
     # Would you like to check for plugin updates on startup? It's highly suggested you keep this enabled!
     update-check: true
     # What would you like the command aliases for the plugin to be?
@@ -39,6 +37,46 @@ settings:
     # Set this to false if you are using PEx.
     # I do suggest you switch to LuckPerms so that you can keep it async, but ultimately the choice is yours.
     run-vault-async: true
+storage:
+    # What storage method should be used? (MySQL, JSON, SQLite)
+    storage-type: json
+    # How often (in minutes) do you want all Guild Data to save?
+    save-interval: 1
+    sql:
+        # Define the address for the database. (Doesn't apply to SQLite)
+        host: localhost
+        # Define the port for the database. (Doesn't apply to SQLite)
+        port: '3306'
+        # The name of the database to store data in.
+        # This must be already created! (Doesn't apply to SQLite)
+        database: guilds
+        # The prefix for all Guilds tables.
+        table-prefix: guilds_
+        # Define the credentials for the database. (Doesn't apply to SQLite)
+        username: root
+        password: ''
+        # Sets whether or not to use SSL for the remote SQL database connection (Doesn't apply to SQLite)
+        enable-ssl: false
+        # These settings change the SQL connection pool.
+        # The default settings are optimized for the majority of users.
+        # Do NOT change these settings unless you know what you are doing!
+        # For those looking to migrate data:
+        # IF YOU ARE MIGRATING FROM JSON OR SQLITE TO MYSQL THE SETTINGS MUST BE CONFIGURED EVEN IF THE DATA TYPE IS SET TO JSON OR MYSQL.
+        # When migrating to MySQL, it will attempt to use the MySQL backend (grab the login information here) in order to connect to the database.
+        # We are not responsible for data loss if you are too lazy to read the warnings.
+        # ALWAYS REMEMBER TO BACKUP DATA BEFORE MIGRATING.
+        # Lastly, remember to change your storage-type to the type you're migrating to before you reboot.
+        pool:
+            # Sets the maximum size of the SQL connection pool.
+            # This value will determine the maximum number of connections maintained. (Doesn't apply to SQLite)
+            maximum-pool-size: 10
+            # Sets the minimum number of idle connections that the pool will maintain.
+            # For maximum performance keep this value the same as 'maximum-pool-size' (Doesn't apply to SQLite)
+            minimum-idle: 10
+            # Sets the maximum lifetime of a connection in the pool in milliseconds. (Doesn't apply to SQLite)
+            maximum-lifetime: 1800000
+            # Sets the maximum number of milliseconds for a connection in the pool before timing out. (Doesn't apply to SQLite)
+            connection-timeout: 5000
 hooks:
     # Do we want to hook into Essentials-Chat format to handle guild placeholders?
     essentials-chat: false
@@ -629,6 +667,7 @@ war:
         # {challenger} - The name of the challenging Guild
         # {defender} - The name of the defending Guild
         # {winner} - The winner of the challenge
+        # {loser} - The loser of the challenge
         commands: 
         - ''
     rewards:

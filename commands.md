@@ -221,6 +221,10 @@ Update language files for the plugin
 **Permission**: guilds.command.admin  
 Create a backup of all plugin data
 
+`/guild console migrate <type>`  
+**Permission:** guilds.command.admin  
+Migrate all the plugin data from one type of storage to another
+
 ## [\#]() GUI Commands <a id="gui-commands"></a>
 
 `/guild buff`  
