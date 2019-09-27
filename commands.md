@@ -225,6 +225,10 @@ Create a backup of all plugin data
 **Permission:** guilds.command.admin  
 Migrate all the plugin data from one type of storage to another
 
+`/guild console unclaim-all`  
+**Permission:** guilds.command.admin\|  
+Remove all claim data from the plugin
+
 ## [\#]() GUI Commands <a id="gui-commands"></a>
 
 `/guild buff`  
