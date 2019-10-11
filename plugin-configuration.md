@@ -38,7 +38,7 @@ settings:
     # I do suggest you switch to LuckPerms so that you can keep it async, but ultimately the choice is yours.
     run-vault-async: true
 storage:
-    # What storage method should be used? (MySQL, JSON, SQLite)
+    # What storage method should be used? (MySQL, MariaDB, JSON, SQLite)
     storage-type: json
     # How often (in minutes) do you want all Guild Data to save?
     save-interval: 1
@@ -85,6 +85,9 @@ hooks:
 # Use the following website to get available materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
 # This can work across all MC versions and will attempt to use the proper material based on what version of MC you are using.
 guis:
+    # What time format should we use in the GUIs?
+    # You can use this site to build it https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+    time-format: MMM, d, yy hh:mm aaa
     guild-list:
         # What should the name of the inventory be?
         gui-name: Guild List
@@ -113,6 +116,7 @@ guis:
         # Note: With v3.6.7 and on, you can now use {guild-tier-name} for the name of the tier.
         # Also, from v3.6.7 and on, {guild-status} will now apply from what you set for the guild-info GUI for the status being public or private.
         # In version 3.5.2.2, {guild-challenge-wins} and {guild-challenge-loses} have been added.
+        # In version 3.5.3.3, {creation} was added to display the creation date of the guild
         head-lore: 
         - '&cName&8: &a{guild-name}'
         - '&cPrefix&8: &a{guild-prefix}'
@@ -121,6 +125,7 @@ guis:
         - '&cTier&8: &a{guild-tier}'
         - '&cBalance&8: &a{guild-balance}'
         - '&cMember Count&8: &a{guild-member-count}'
+        - '&cCreation Date&8: &a{creation}'
     guild-buffs:
         # What should the name of the inventory be?
         gui-name: Guild Buffs
@@ -585,7 +590,8 @@ guis:
             - '&8• &7Name: &a{name}'
             - '&8• &7Role: &a{role}'
             - '&8• &7Status: {status}'
-            - ''
+            - '&8• &7Join Date: &a{join}'
+            - '&8• &7Last Login: &a{login}'
             # What do you want to be what shows when a member is online?
             online: '&aOnline'
             # What do you want to be what shows when a member is offline?
@@ -607,6 +613,8 @@ guild:
     blacklist:
         # Do we want to enable the blacklist?
         enabled: true
+        # Do we want the blacklist to be case sensitive?
+        case-sensitive: true
         # What words would you like to blacklist from being used?
         words: 
         - crap

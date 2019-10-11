@@ -89,7 +89,7 @@ Admin commands are basically self-understandable. They give you the power over h
  Admin command to set the home of a guild.
 
 `/guild admin spy`  
- **Permission**: guilds.command.admin  
+ **Permission**: guilds.chat.spy  
  Toggles the ability to see all guild chat.
 
 `/guild admin status <guild>`  
@@ -238,6 +238,10 @@ Remove all claim data from the plugin
 `/guild list`  
  **Permission**: guilds.command.list  
  Opens the guild list GUI.
+
+`/guild members`  
+ **Permission**: guilds.command.members  
+ Opens the member list GUI.
 
 `/guild vault`  
  **Permission**: guilds.command.vault  

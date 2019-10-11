@@ -19,7 +19,8 @@
 %guilds\_max\_balance%  
 %guilds\_formatted%  
 %guilds\_challenge\_wins%  
-%guilds\_challenge\_loses%
+%guilds\_challenge\_loses%  
+%guilds\_motd%
 
 ## [\#]() MVdWPlaceholderAPI <a id="mvdwplaceholderapi"></a>
 
@@ -43,6 +44,7 @@ To ensure that these stay updated with the regular PlaceholderAPI placeholders, 
 {placeholderapi\_guilds\_formatted}  
 {placeholderapi\_guilds\_challenge\_wins}  
 {placeholderapi\_guilds\_challenge\_loses}  
+{placeholderapi\_guilds\_motd}  
 
 
 ## [\#]() EssentialsChat <a id="essentialschat"></a>
