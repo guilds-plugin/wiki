@@ -4,6 +4,13 @@ Understanding how the commands work in the project is super simple. All you have
 
 ![HelpMenu](.gitbook/assets/helpmenu.63deede6.png)
 
+### Group Perms
+
+To easily give a player / group access to all the correct commands, you can give the following permissions:
+
+**Member:** guilds.group.member  
+**Admin:** guilds.group.admin
+
 ### [\#]() Aliases <a id="aliases"></a>
 
 Since Guilds is such a big project, we knew that it can get repetitive typing out full commands each time so we have made the follow aliases work so you don't have to type everything out each time. Use whichever you want!
