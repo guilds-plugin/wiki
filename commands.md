@@ -2,7 +2,7 @@
 
 Understanding how the commands work in the project is super simple. All you have to do is type `/guilds` and you will be presented with a very nice-looking help menu!
 
-![HelpMenu](.gitbook/assets/helpmenu.63deede6.png)
+![](.gitbook/assets/javaw_2019-10_24-13-51-48.png)
 
 ### Group Perms
 
