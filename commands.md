@@ -103,6 +103,10 @@ Admin commands are basically self-understandable. They give you the power over h
  **Permission**: guilds.command.admin  
  Toggle the status of a guild by force.
 
+`/guild admin transfer <guild> <new master>`  
+**Permission:** guilds.command.admin  
+Transfer a guild to another member by force
+
 `/guild admin upgrade <guild>`  
  **Permission**: guilds.command.admin  
  Force upgrade a guild's tier.
