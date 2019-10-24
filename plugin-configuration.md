@@ -2,130 +2,21 @@
 
 ## Configuration
 
-The `config.yml` will be created on the first server startup.
+When you start the plugin for the first time, the following files will generate:
 
-The config file _should_ automatically update with the new additions added in an update.
+* buffs.yml
+* config.yml
+* roles.yml
+* tiers.yml
+
+The configuration for the plugin is split up into multiple files due to how flexible the plugin is and how much custom data you can add to it.
+
+## Buffs.yml
+
+The `buffs.yml` file will look like this by default:
 
 ```yaml
-# Guilds
-# Creator: Glare
-# Contributors: https://github.com/guilds-plugin/Guilds/graphs/contributors
-# Issues: https://github.com/guilds-plugin/Guilds/issues
-# Spigot: https://www.spigotmc.org/resources/66176/
-# Wiki: https://wiki.glaremasters.me/
-# Discord: https://glaremasters.me/discord
-settings:
-    announcements:
-        # This is used for the Guild's Announcement System, which allow me (The Author) to communicate to you guys without updating.
-        # The way this works is very simple. If you have "console" set to "true", you will see the announcement when the server starts.
-        # If you have "in-game" set to "true", your OPed players will see it the first time they login to the server.
-        console: true
-        in-game: true
-    # Choosing your language for the plugin couldn't be easier! The default language is english.
-    # If you speak another language but don't see it here, feel free to submit it via one of the links above to have it added to the plugin.
-    # If you try and use a different language than any in the list above, the plugin will not function in a normal manner.
-    # As you can see this is currently en-US, and there is a en-US.yml file in the language folder.
-    # If I wanted to switch to french, I would use fr-FR as the language instead.
-    messagesLanguage: en-US
-    # Would you like to check for plugin updates on startup? It's highly suggested you keep this enabled!
-    update-check: true
-    # What would you like the command aliases for the plugin to be?
-    # You can have as many as your want, just separate each with | and NO SPACES.
-    plugin-aliases: guild|guilds|g
-    # Would you like to run vault permission changes async? (Will be less stress on the main thread and prevent lag)
-    # Async is used by LuckPerms.
-    # Set this to false if you are using PEx.
-    # I do suggest you switch to LuckPerms so that you can keep it async, but ultimately the choice is yours.
-    run-vault-async: true
-storage:
-    # What storage method should be used? (MySQL, MariaDB, JSON, SQLite)
-    storage-type: json
-    # How often (in minutes) do you want all Guild Data to save?
-    save-interval: 1
-    sql:
-        # Define the address for the database. (Doesn't apply to SQLite)
-        host: localhost
-        # Define the port for the database. (Doesn't apply to SQLite)
-        port: '3306'
-        # The name of the database to store data in.
-        # This must be already created! (Doesn't apply to SQLite)
-        database: guilds
-        # The prefix for all Guilds tables.
-        table-prefix: guilds_
-        # Define the credentials for the database. (Doesn't apply to SQLite)
-        username: root
-        password: ''
-        # Sets whether or not to use SSL for the remote SQL database connection (Doesn't apply to SQLite)
-        enable-ssl: false
-        # These settings change the SQL connection pool.
-        # The default settings are optimized for the majority of users.
-        # Do NOT change these settings unless you know what you are doing!
-        # For those looking to migrate data:
-        # IF YOU ARE MIGRATING FROM JSON OR SQLITE TO MYSQL THE SETTINGS MUST BE CONFIGURED EVEN IF THE DATA TYPE IS SET TO JSON OR MYSQL.
-        # When migrating to MySQL, it will attempt to use the MySQL backend (grab the login information here) in order to connect to the database.
-        # We are not responsible for data loss if you are too lazy to read the warnings.
-        # ALWAYS REMEMBER TO BACKUP DATA BEFORE MIGRATING.
-        # Lastly, remember to change your storage-type to the type you're migrating to before you reboot.
-        pool:
-            # Sets the maximum size of the SQL connection pool.
-            # This value will determine the maximum number of connections maintained. (Doesn't apply to SQLite)
-            maximum-pool-size: 10
-            # Sets the minimum number of idle connections that the pool will maintain.
-            # For maximum performance keep this value the same as 'maximum-pool-size' (Doesn't apply to SQLite)
-            minimum-idle: 10
-            # Sets the maximum lifetime of a connection in the pool in milliseconds. (Doesn't apply to SQLite)
-            maximum-lifetime: 1800000
-            # Sets the maximum number of milliseconds for a connection in the pool before timing out. (Doesn't apply to SQLite)
-            connection-timeout: 5000
-hooks:
-    # Do we want to hook into Essentials-Chat format to handle guild placeholders?
-    essentials-chat: false
-    # Do we want to hook into WorldGuard to allow claiming land?
-    worldguard-claims: false
-# Use the following website to get available materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
-# This can work across all MC versions and will attempt to use the proper material based on what version of MC you are using.
 guis:
-    # What time format should we use in the GUIs?
-    # You can use this site to build it https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
-    time-format: MMM, d, yy hh:mm aaa
-    guild-list:
-        # What should the name of the inventory be?
-        gui-name: Guild List
-        # What should the name of the all the items be in the inventory?
-        # Currently supports {player} and {guild}.
-        item-name: '&f{player}''s Guild'
-        # How should the menu be sorted?
-        # LOADED: In the order that the Guilds were loaded on startup
-        # TIER: In order from highest tier to lowest tier
-        # MEMBERS: In order from most members to least members
-        # BALANCE: In order from most in bank to least
-        # WINS: In order from most arena wins to least
-        sort: LOADED
-        # What item should players click to go to the next page?
-        next-page-item: EMPTY_MAP
-        # What should the name of this item be?
-        next-page-item-name: '&fNext Page'
-        # What item should players click to go to the previous page?
-        previous-page-item: EMPTY_MAP
-        # What should the name of this item be?
-        previous-page-item-name: '&fPrevious Page'
-        # What should be the default texture url for textures that fail to load in? Refer to the Guild Manage settings to see how to change the texture!
-        head-default-url: 7a2df315b43583b1896231b77bae1a507dbd7e43ad86c1cfbe3b2b8ef3430e9e
-        # You are free to design this to your liking
-        # This is just an example of all the available placeholders that you can use for the lore!
-        # Note: With v3.6.7 and on, you can now use {guild-tier-name} for the name of the tier.
-        # Also, from v3.6.7 and on, {guild-status} will now apply from what you set for the guild-info GUI for the status being public or private.
-        # In version 3.5.2.2, {guild-challenge-wins} and {guild-challenge-loses} have been added.
-        # In version 3.5.3.3, {creation} was added to display the creation date of the guild
-        head-lore: 
-        - '&cName&8: &a{guild-name}'
-        - '&cPrefix&8: &a{guild-prefix}'
-        - '&cMaster&8: &a{guild-master}'
-        - '&cStatus&8: &a{guild-status}'
-        - '&cTier&8: &a{guild-tier}'
-        - '&cBalance&8: &a{guild-balance}'
-        - '&cMember Count&8: &a{guild-member-count}'
-        - '&cCreation Date&8: &a{creation}'
     guild-buffs:
         # What should the name of the inventory be?
         gui-name: Guild Buffs
@@ -451,6 +342,135 @@ guis:
                         - ''
                 # What slot would you like this to use?
                 slot: 8
+
+```
+
+## Config.yml
+
+The `config.yml` file will look like this by default:
+
+```yaml
+# Guilds
+# Creator: Glare
+# Contributors: https://github.com/guilds-plugin/Guilds/graphs/contributors
+# Issues: https://github.com/guilds-plugin/Guilds/issues
+# Spigot: https://www.spigotmc.org/resources/66176/
+# Wiki: https://wiki.glaremasters.me/
+# Discord: https://glaremasters.me/discord
+settings:
+    announcements:
+        # This is used for the Guild's Announcement System, which allow me (The Author) to communicate to you guys without updating.
+        # The way this works is very simple. If you have "console" set to "true", you will see the announcement when the server starts.
+        # If you have "in-game" set to "true", your OPed players will see it the first time they login to the server.
+        console: true
+        in-game: true
+    # Choosing your language for the plugin couldn't be easier! The default language is english.
+    # If you speak another language but don't see it here, feel free to submit it via one of the links above to have it added to the plugin.
+    # If you try and use a different language than any in the list above, the plugin will not function in a normal manner.
+    # As you can see this is currently en-US, and there is a en-US.yml file in the language folder.
+    # If I wanted to switch to french, I would use fr-FR as the language instead.
+    messagesLanguage: en-US
+    # Would you like to check for plugin updates on startup? It's highly suggested you keep this enabled!
+    update-check: true
+    # What would you like the command aliases for the plugin to be?
+    # You can have as many as your want, just separate each with | and NO SPACES.
+    plugin-aliases: guild|guilds|g
+    # Would you like to run vault permission changes async? (Will be less stress on the main thread and prevent lag)
+    # Async is used by LuckPerms.
+    # Set this to false if you are using PEx.
+    # I do suggest you switch to LuckPerms so that you can keep it async, but ultimately the choice is yours.
+    run-vault-async: true
+storage:
+    # What storage method should be used? (MySQL, MariaDB, JSON, SQLite)
+    storage-type: json
+    # How often (in minutes) do you want all Guild Data to save?
+    save-interval: 1
+    sql:
+        # Define the address for the database. (Doesn't apply to SQLite)
+        host: localhost
+        # Define the port for the database. (Doesn't apply to SQLite)
+        port: '3306'
+        # The name of the database to store data in.
+        # This must be already created! (Doesn't apply to SQLite)
+        database: guilds
+        # The prefix for all Guilds tables.
+        table-prefix: guilds_
+        # Define the credentials for the database. (Doesn't apply to SQLite)
+        username: root
+        password: ''
+        # Sets whether or not to use SSL for the remote SQL database connection (Doesn't apply to SQLite)
+        enable-ssl: false
+        # These settings change the SQL connection pool.
+        # The default settings are optimized for the majority of users.
+        # Do NOT change these settings unless you know what you are doing!
+        # For those looking to migrate data:
+        # IF YOU ARE MIGRATING FROM JSON OR SQLITE TO MYSQL THE SETTINGS MUST BE CONFIGURED EVEN IF THE DATA TYPE IS SET TO JSON OR MYSQL.
+        # When migrating to MySQL, it will attempt to use the MySQL backend (grab the login information here) in order to connect to the database.
+        # We are not responsible for data loss if you are too lazy to read the warnings.
+        # ALWAYS REMEMBER TO BACKUP DATA BEFORE MIGRATING.
+        # Lastly, remember to change your storage-type to the type you're migrating to before you reboot.
+        pool:
+            # Sets the maximum size of the SQL connection pool.
+            # This value will determine the maximum number of connections maintained. (Doesn't apply to SQLite)
+            maximum-pool-size: 10
+            # Sets the minimum number of idle connections that the pool will maintain.
+            # For maximum performance keep this value the same as 'maximum-pool-size' (Doesn't apply to SQLite)
+            minimum-idle: 10
+            # Sets the maximum lifetime of a connection in the pool in milliseconds. (Doesn't apply to SQLite)
+            maximum-lifetime: 1800000
+            # Sets the maximum number of milliseconds for a connection in the pool before timing out. (Doesn't apply to SQLite)
+            connection-timeout: 5000
+hooks:
+    # Do we want to hook into Essentials-Chat format to handle guild placeholders?
+    essentials-chat: false
+    # Do we want to hook into WorldGuard to allow claiming land?
+    worldguard-claims: false
+# Use the following website to get available materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# This can work across all MC versions and will attempt to use the proper material based on what version of MC you are using.
+guis:
+    # What time format should we use in the GUIs?
+    # You can use this site to build it https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+    time-format: MMM, d, yy hh:mm aaa
+    guild-list:
+        # What should the name of the inventory be?
+        gui-name: Guild List
+        # What should the name of the all the items be in the inventory?
+        # Currently supports {player} and {guild}.
+        item-name: '&f{player}''s Guild'
+        # How should the menu be sorted?
+        # LOADED: In the order that the Guilds were loaded on startup
+        # TIER: In order from highest tier to lowest tier
+        # MEMBERS: In order from most members to least members
+        # BALANCE: In order from most in bank to least
+        # WINS: In order from most arena wins to least
+        # NAME: In order by name
+        # AGE: In order from first created to last
+        sort: LOADED
+        # What item should players click to go to the next page?
+        next-page-item: EMPTY_MAP
+        # What should the name of this item be?
+        next-page-item-name: '&fNext Page'
+        # What item should players click to go to the previous page?
+        previous-page-item: EMPTY_MAP
+        # What should the name of this item be?
+        previous-page-item-name: '&fPrevious Page'
+        # What should be the default texture url for textures that fail to load in? Refer to the Guild Manage settings to see how to change the texture!
+        head-default-url: 7a2df315b43583b1896231b77bae1a507dbd7e43ad86c1cfbe3b2b8ef3430e9e
+        # You are free to design this to your liking
+        # This is just an example of all the available placeholders that you can use for the lore!
+        # Note: With v3.6.7 and on, you can now use {guild-tier-name} for the name of the tier.
+        # Also, from v3.6.7 and on, {guild-status} will now apply from what you set for the guild-info GUI for the status being public or private.
+        # In version 3.5.2.2, {guild-challenge-wins} and {guild-challenge-loses} have been added.
+        # In version 3.5.3.3, {creation} was added to display the creation date of the guild
+        head-lore: 
+        - '&cName&8: &a{guild-name}'
+        - '&cPrefix&8: &a{guild-prefix}'
+        - '&cMaster&8: &a{guild-master}'
+        - '&cStatus&8: &a{guild-status}'
+        - '&cTier&8: &a{guild-tier}'
+        - '&cBalance&8: &a{guild-balance}'
+        - '&cMember Count&8: &a{guild-member-count}'
+        - '&cCreation Date&8: &a{creation}'
     # Here you can control what the GUI looks like that allows players to choose which vault to open
     # You can do things like set the name of the gui, the material to use, material name, and lore!
     vault-picker:
@@ -578,6 +598,11 @@ guis:
     # This part of the config controls what the members gui looks like.
     # You can get to this in game by clicking on the members icon via the guild info gui.
     guild-info-members:
+        # How should the menu be sorted?
+        # ROLE: In order from highest role to lowest
+        # NAME: In order by their username
+        # AGE: In order of length in guild
+        sort: ROLE
         # What would you like the name of the GUI to be?
         name: '&8» &rMembers of {name}'
         item:
@@ -749,86 +774,14 @@ codes:
     list-inactive-codes: true
     # What is the max amount of active codes you would like to allow per guild?
     amount: 10
-# This section of the config will talk about various parts of upgrading a guild and allow you to choose how it works.
-# For "mob-xp-multiplier" the default is 1, meaning that it will drop the normal amount of XP for non-upgraded guilds.
-# DO NOT set it to 0, that will either throw errors or cause mobs to not drop XP.
-# Keep in mind for the damage-multiplier, it applies to players also, so by default it's set to normal for every tier.
-tiers:
-    # Should permissions carry over between tiers?
-    carry-over: true
-    list:
-        1:
-            # Which level tier is this? 1 is the default.
-            level: 1
-            # What is the name of this tier?
-            name: Bronze
-            # How much is this tier? (If first tier, keep as same price as cost creation)
-            cost: 0.0
-            # How many members can be in a guild of this tier?
-            max-members: 15
-            # How many Vaults would you like the Guild to be able to use?
-            vault-amount: 1
-            # How much extra XP should drop from mobs?
-            mob-xp-multiplier: 1.0
-            # How much extra damage should be done?
-            damage-multiplier: 1.0
-            # How much can this tier hold in the bank?
-            max-bank-balance: 10000.0
-            # How many members should be in a guild for it to be able to rankup?
-            members-to-rankup: 0
-            # Would you like this tier to be able to open the buff GUI?
-            use-buffs: true
-            # If you wish to give this tier extra permissions, put them here.
-            permissions: 
-            - example.perm.here
-        2:
-            # Which level tier is this? 1 is the default.
-            level: 2
-            # What is the name of this tier?
-            name: Silver
-            # How much is this tier? (If first tier, keep as same price as cost creation)
-            cost: 200.0
-            # How many members can be in a guild of this tier?
-            max-members: 30
-            # How many Vaults would you like the Guild to be able to use?
-            vault-amount: 2
-            # How much extra XP should drop from mobs?
-            mob-xp-multiplier: 2.0
-            # How much extra damage should be done?
-            damage-multiplier: 1.0
-            # How much can this tier hold in the bank?
-            max-bank-balance: 20000.0
-            # How many members should be in a guild for it to be able to rankup?
-            members-to-rankup: 0
-            # Would you like this tier to be able to open the buff GUI?
-            use-buffs: true
-            # If you wish to give this tier extra permissions, put them here.
-            permissions: 
-            - example.perm.here
-        3:
-            # Which level tier is this? 1 is the default.
-            level: 3
-            # What is the name of this tier?
-            name: Gold
-            # How much is this tier? (If first tier, keep as same price as cost creation)
-            cost: 300.0
-            # How many members can be in a guild of this tier?
-            max-members: 50
-            # How many Vaults would you like the Guild to be able to use?
-            vault-amount: 3
-            # How much extra XP should drop from mobs?
-            mob-xp-multiplier: 3.0
-            # How much extra damage should be done?
-            damage-multiplier: 1.0
-            # How much can this tier hold in the bank?
-            max-bank-balance: 30000.0
-            # How many members should be in a guild for it to be able to rankup?
-            members-to-rankup: 0
-            # Would you like this tier to be able to open the buff GUI?
-            use-buffs: true
-            # If you wish to give this tier extra permissions, put them here.
-            permissions: 
-            - example.perm.here
+
+```
+
+## Roles.yml
+
+The `roles.yml` file will look like this by default:
+
+```yaml
 roles:
     0:
         name: GuildMaster
@@ -962,6 +915,94 @@ roles:
             see-code-redeemers: false
             modify-motd: false
             initiate-war: false
+
+```
+
+## Tiers.yml
+
+The `tiers.yml` file will look like this by default:
+
+```yaml
+# This section of the config will talk about various parts of upgrading a guild and allow you to choose how it works.
+# For "mob-xp-multiplier" the default is 1, meaning that it will drop the normal amount of XP for non-upgraded guilds.
+# DO NOT set it to 0, that will either throw errors or cause mobs to not drop XP.
+# Keep in mind for the damage-multiplier, it applies to players also, so by default it's set to normal for every tier.
+tiers:
+    # Should permissions carry over between tiers?
+    carry-over: true
+    list:
+        1:
+            # Which level tier is this? 1 is the default.
+            level: 1
+            # What is the name of this tier?
+            name: Bronze
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 0.0
+            # How many members can be in a guild of this tier?
+            max-members: 15
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 1
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 1.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 10000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 0
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        2:
+            # Which level tier is this? 1 is the default.
+            level: 2
+            # What is the name of this tier?
+            name: Silver
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 200.0
+            # How many members can be in a guild of this tier?
+            max-members: 30
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 2
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 2.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 20000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 0
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
+        3:
+            # Which level tier is this? 1 is the default.
+            level: 3
+            # What is the name of this tier?
+            name: Gold
+            # How much is this tier? (If first tier, keep as same price as cost creation)
+            cost: 300.0
+            # How many members can be in a guild of this tier?
+            max-members: 50
+            # How many Vaults would you like the Guild to be able to use?
+            vault-amount: 3
+            # How much extra XP should drop from mobs?
+            mob-xp-multiplier: 3.0
+            # How much extra damage should be done?
+            damage-multiplier: 1.0
+            # How much can this tier hold in the bank?
+            max-bank-balance: 30000.0
+            # How many members should be in a guild for it to be able to rankup?
+            members-to-rankup: 0
+            # Would you like this tier to be able to open the buff GUI?
+            use-buffs: true
+            # If you wish to give this tier extra permissions, put them here.
+            permissions: 
+            - example.perm.here
 
 ```
 
