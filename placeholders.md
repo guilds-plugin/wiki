@@ -49,6 +49,8 @@ To ensure that these stay updated with the regular PlaceholderAPI placeholders, 
 
 ## [\#]() EssentialsChat <a id="essentialschat"></a>
 
+For the EssentialsChat Placeholders to work, you must enable the hook in the config!
+
 {GUILD}  
 {GUILD\_PREFIX}  
 {GUILD\_MASTER}  
