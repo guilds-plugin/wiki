@@ -51,6 +51,12 @@ To ensure that these stay updated with the regular PlaceholderAPI placeholders, 
 
 For the EssentialsChat Placeholders to work, you must enable the hook in the config!
 
+Example:
+
+```text
+format: '<{GUILD} {DISPLAYNAME}> {MESSAGE}'
+```
+
 {GUILD}  
 {GUILD\_PREFIX}  
 {GUILD\_MASTER}  
